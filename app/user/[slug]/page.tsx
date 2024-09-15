@@ -19,10 +19,11 @@
 
 import Dashboard from './dashboard';
 
-export default function User({ params }: { params: { slug: string } }) {
+export default function User() {
+  // { params }: { params: { slug: string } }
   return (
     <div>
-      <h1>Welcome, {params.slug}!</h1>
+      {/* <h1>Welcome, {params.slug}!</h1> */}
       <Dashboard />
     </div>
   );

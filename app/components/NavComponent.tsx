@@ -5,11 +5,11 @@ import Navbar from "./Navbar";
 
 export default function NavbarComponent() {
     const pathname = usePathname();
-    // return pathname !=='/register' && <Navbar />
-    if (pathname !== '/register' && pathname !== '/login') {
-        return <Navbar />
-    }
-    return null;
+    return pathname =='/' && <Navbar />
+    // if (pathname !== '/register' && pathname !== '/login' && pathname !== '/user/') {
+    //     return <Navbar />
+    // }
+    // return null;
 }
 
  // const pathname = usePathname();

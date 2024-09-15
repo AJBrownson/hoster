@@ -1,4 +1,7 @@
 "use client"
+import Campaigns from '@/app/components/Cards/campaigns';
+import CreateNew from '@/app/components/Cards/createNew';
+import TotalPosts from '@/app/components/Cards/totalPosts';
 import { useState } from 'react';
 
 // Sidebar Tabs
@@ -54,13 +57,25 @@ export default function Dashboard() {
 
 // Components for each tab
 function Overview() {
-  return <div><h2>Overview Content</h2><p>This is the overview section.</p></div>;
+  return (
+    <>
+    <TotalPosts />
+    </>
+  )
 }
 
 function Campaign() {
-  return <div><h2>Campaign Content</h2><p>This is the campaign section.</p></div>;
+  return (
+    <>
+    <Campaigns />
+    </>
+  )
 }
 
 function Create() {
-  return <div><h2>Create Content</h2><p>This is the create section.</p></div>;
+  return (
+    <>
+    <CreateNew />
+    </>
+  )
 }

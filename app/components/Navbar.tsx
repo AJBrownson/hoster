@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Navbar() {
@@ -18,8 +19,12 @@ export default function Navbar() {
           <li><a href="#" className="text-white">FAQ</a></li>
         </ul>
         <div className="flex items-center space-x-4">
+          <Link href="/login">
           <button className="border border-white px-4 py-2 rounded-full hover:border-amber-600">Log In</button>
+          </Link>
+          <Link href="/register">
           <button className="bg-gray-200 text-black px-6 py-2 rounded-full  hover:bg-amber-600 hover:text-white">Get Started</button>
+          </Link>
         </div>
       </nav>
         </>
