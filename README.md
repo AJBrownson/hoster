@@ -1,2 +1,2 @@
 # Hoster
-A AI social media scheduling tool
+An AI social media scheduling tool
