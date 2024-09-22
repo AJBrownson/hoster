@@ -1,12 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import Image from "next/image";
 import BG from "@/public/formBg.jpg";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
+// import { doSocialLogin } from "@/app/actions";
+import { FcGoogle } from "react-icons/fc";
+
+
 
 export default function LoginForm() {
   return (
+    <>
     <div className="min-h-screen flex flex-col items-center justify-center lg:justify-end lg:flex-row bg-black relative">
-     
       <div className="absolute inset-0 z-0">
         <Image
           src={BG}
@@ -17,13 +23,15 @@ export default function LoginForm() {
           className="w-full h-full object-cover"
         />
       </div>
-
       <div className="relative z-10 flex items-center justify-center w-full lg:w-1/2 px-2">
         <div className="bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-lg w-full max-w-md border border-white/20">
           <h2 className="text-3xl text-white font-bold mb-6">Sign In</h2>
 
-          <button className="w-full bg-white text-black py-2 rounded-lg flex items-center justify-center mb-4">
+          <button 
+          onClick={() => signIn("google")}
+          className="w-full bg-white text-black py-2 rounded-lg flex gap-x-3 items-center justify-center mb-4">
             {/* <img src="/icons/google.svg" alt="Google" className="w-5 h-5 mr-2" /> */}
+            <FcGoogle />
             Sign in with Google
           </button>
 
@@ -65,5 +73,6 @@ export default function LoginForm() {
         </div>
       </div>
     </div>
+    </>
   );
 }

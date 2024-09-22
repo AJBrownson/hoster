@@ -4,6 +4,8 @@ import Campaigns from '@/app/components/Cards/campaigns';
 import CreateNew from '@/app/components/Cards/createNew';
 import TotalPosts from '@/app/components/Cards/totalPosts';
 import { useState } from 'react';
+import RecentPosts from '@/app/components/Cards/recentPosts';
+
 
 // Sidebar Tabs
 const tabs = [
@@ -71,6 +73,7 @@ function Overview() {
   return (
     <>
     <TotalPosts />
+    <RecentPosts />
     </>
   )
 }
