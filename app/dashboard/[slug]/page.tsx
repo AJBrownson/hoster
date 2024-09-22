@@ -19,8 +19,9 @@ interface DashProps {
         slug: string;
     };
 }
+// { params }
 
-const Dashboard: NextPage<DashProps> = ({ params }) => {
+const Dashboard: NextPage<DashProps> = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const renderContent = () => {
