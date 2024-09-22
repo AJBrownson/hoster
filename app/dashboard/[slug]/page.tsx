@@ -4,6 +4,8 @@ import Campaigns from '@/app/components/Cards/campaigns';
 import CreateNew from '@/app/components/Cards/createNew';
 import TotalPosts from '@/app/components/Cards/totalPosts';
 import { useState } from 'react';
+import RecentPosts from '@/app/components/Cards/recentPosts';
+
 
 // Sidebar Tabs
 const tabs = [
@@ -17,8 +19,9 @@ interface DashProps {
         slug: string;
     };
 }
+// { params }
 
-const Dashboard: NextPage<DashProps> = ({ params }) => {
+const Dashboard: NextPage<DashProps> = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const renderContent = () => {
@@ -71,6 +74,7 @@ function Overview() {
   return (
     <>
     <TotalPosts />
+    <RecentPosts />
     </>
   )
 }
