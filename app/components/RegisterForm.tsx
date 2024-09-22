@@ -1,6 +1,12 @@
+"use client"
 import Image from "next/image";
 import BG from "@/public/formBg.jpg";
 import Link from "next/link";
+// import { signIn } from "@/auth"
+import { signIn } from "next-auth/react";
+import { FcGoogle } from "react-icons/fc";
+
+
 
 export default function SignUp() {
   return (
@@ -21,8 +27,11 @@ export default function SignUp() {
         <div className="bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-lg w-full max-w-md border border-white/20">
           <h2 className="text-3xl text-white font-bold mb-6">Sign Up</h2>
 
-          <button className="w-full bg-white text-black py-2 rounded-lg flex items-center justify-center mb-4">
+          <button 
+          onClick={() => signIn("google")}
+          className="w-full bg-white text-black py-2 rounded-lg flex gap-x-3 items-center justify-center mb-4">
             {/* <img src="/icons/google.svg" alt="Google" className="w-5 h-5 mr-2" /> */}
+            <FcGoogle />
             Sign in with Google
           </button>
 
@@ -32,7 +41,7 @@ export default function SignUp() {
             <hr className="flex-grow border-gray-100" />
           </div>
 
-          <form>
+          <form action="#" method="POST">
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm text-gray-100">Email</label>
               <input
