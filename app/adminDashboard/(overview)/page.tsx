@@ -1,3 +1,5 @@
+import RecentPosts from '@/app/components/Cards/recentPosts';
+import TotalPosts from '@/app/components/Cards/totalPosts';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
@@ -7,7 +9,9 @@ export const metadata: Metadata = {
 export default function Page() {
     return(
         <>
-        OVERVIEW PAGE/ DASHBOARD HOME
+        <h1 className='text-xl md:text-2xl font-semibold mb-6'>Dashboard</h1>
+        <TotalPosts />
+        <RecentPosts />
         </>
     )
 }
