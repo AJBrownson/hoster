@@ -3,7 +3,7 @@ import TotalPosts from '@/app/components/Cards/totalPosts';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Hoster | User Dashboard',
 };
 
 export default function Page() {
